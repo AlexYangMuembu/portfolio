@@ -1,0 +1,116 @@
+/* =====================================================
+   SECTIONS - SERVICES & SHOWS
+===================================================== */
+
+/* -------------------------------
+   Services Grid
+--------------------------------- */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.services-grid .card {
+  background: var(--card);
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s;
+}
+
+.services-grid .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+}
+
+/* -------------------------------
+   Shows / Media Timeline
+--------------------------------- */
+.shows-section {
+  padding: 4rem 1.5rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.shows-section h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--text);
+}
+
+/* Timeline */
+.timeline {
+  list-style: none;
+  padding-left: 0;
+  position: relative;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background: var(--accent); /* adapt to brand */
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 2.5rem;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 2px;
+  top: 8px;
+  width: 16px;
+  height: 16px;
+  background: var(--accent);
+  border-radius: 50%;
+}
+
+.timeline-content h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: var(--text);
+}
+
+.organization {
+  color: #666;
+  margin: 0.2rem 0;
+}
+
+.period {
+  font-size: 0.9rem;
+  color: #999;
+}
+
+.other-media {
+  font-style: italic;
+  color: #444;
+}
+
+/* -------------------------------
+   DARK MODE OVERRIDES
+--------------------------------- */
+body.dark .services-grid .card {
+  background: var(--card);
+}
+
+body.dark .timeline::before {
+  background: var(--accent);
+}
+
+body.dark .timeline-dot {
+  background: var(--accent);
+}
+
+body.dark .organization,
+body.dark .period,
+body.dark .other-media {
+  color: #ccc;
+}

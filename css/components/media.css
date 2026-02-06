@@ -1,0 +1,94 @@
+/* ===============================
+   MEDIA SECTION
+================================ */
+#media {
+  padding: 6rem 1.5rem;
+  background: #fff; /* neutral background for focus on media */
+  text-align: center;
+}
+
+/* Heading */
+#media h2 {
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  line-height: 1.1;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+/* Subtle underline accent */
+#media h2::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: var(--accent);
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Description */
+#media p.muted {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.8;
+}
+
+/* Media Grid */
+.media-grid {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: 1fr;
+}
+
+/* Individual Media Items */
+.media-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.media-item audio,
+.media-item video {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect: lift & glow */
+.media-item audio:hover,
+.media-item video:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Caption */
+.media-item figcaption {
+  margin-top: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+/* Responsive Grid */
+@media (min-width: 768px) {
+  .media-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .media-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

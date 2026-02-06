@@ -1,0 +1,29 @@
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 70px;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    background: var(--nav-bg);
+    padding: 20px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
+
+@media (max-width: 600px) {
+  section {
+    padding: 50px 15px;
+  }
+
+  #hero {
+    padding: 90px 15px;
+  }
+}

@@ -1,0 +1,24 @@
+footer {
+  background: var(--nav-bg);
+  text-align: center;
+  padding: 30px 20px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+footer .socials {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 15px 0;
+}
+
+footer .socials a {
+  width: 40px;
+  height: 40px;
+  background: lightseagreen;
+  border-radius: 50%;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}

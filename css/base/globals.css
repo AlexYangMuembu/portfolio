@@ -1,0 +1,61 @@
+:root {
+  /* === LIGHT THEME === */
+  --bg: #ffffff;
+  --text: #111111;
+  --card: #f2f2f2;
+  --nav-bg: #ffffff;
+  --text-on-accent: #ffffff;
+
+  --accent: #ff0066;
+  --accent-soft: #ffe6f0;
+
+  --primary: #111111;       /* headings */
+  --text-secondary: #555555; /* paragraph text */
+
+  --font-main: system-ui, sans-serif;
+}
+
+/* === DARK THEME === */
+body.dark {
+  --bg: #111111;
+  --text: #ffffff;
+  --card: #1e1e1e;
+  --nav-bg: #111111;
+  --text-on-accent: #fff;
+
+  --primary: #ffffff;        /* headings in dark mode */
+  --text-secondary: #cccccc; /* paragraphs in dark mode */
+}
+
+/* === BRAND PRESETS === */
+body.brand-radio {
+  --accent: #ff0066;
+  --accent-soft: #ffe6f0;
+  --font-main: "Poppins", system-ui, sans-serif;
+}
+
+body.brand-podcast {
+  --accent: #6a00ff;
+  --accent-soft: #eee6ff;
+  --font-main: "Inter", system-ui, sans-serif;
+}
+
+body.brand-corporate {
+  --accent: #0a66c2;
+  --accent-soft: #e6f0fa;
+  --font-main: "Roboto", system-ui, sans-serif;
+}
+
+/* === HERO BACKGROUND (optional dark adjustments) === */
+:root {
+  --hero-bg: linear-gradient(135deg, var(--accent), var(--accent-soft));
+}
+
+body.dark {
+  --hero-bg: linear-gradient(135deg, #ff3399, #993366);
+}
+body {
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s ease, color 0.3s ease;
+}
